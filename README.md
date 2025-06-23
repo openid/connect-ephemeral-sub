@@ -16,7 +16,7 @@ Other branches are built and deployed as well, using the branch name as the html
 
 ## Build the HTML ##
 
-```docker run -v `pwd`:/data danielfett/markdown2rfc openid-connect-subject-identifier-1_0.md```
+```docker run -v `pwd`:/data danielfett/markdown2rfc openid-connect-ephemeral-subject-identifier-1_0.md```
 
 ## Contact
 
