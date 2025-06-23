@@ -1,5 +1,5 @@
 %%%
-title = "OpenID Connect Ephermeral Subject Identifier Draft 01"
+title = "OpenID Connect Ephermeral Subject Identifier 1.0 - Draft 01"
 abbrev = "oidc-esid"
 ipr = "none"
 workgroup = "Connect"
