@@ -136,6 +136,10 @@ The following referenced documents are indispensable for the application of this
 [OpenID.Registration] - OpenID Connect Registration 1.0
 [OpenID.Registration]: http://openid.net/specs/openid-connect-registration-1_0.html
 
+## Informative references
+
+[ISO/IEC 27551] - Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication
+[ISO/IEC 27551]: https://www.iso.org/standard/72018.html
 
 {backmatter}
 
@@ -157,6 +161,6 @@ The technology described in this specification was made available from contribut
 
 [[ To be removed from the final specification ]]
 
--01
+-01 Added rationale for this document and a reference to ISO/IEC 27551. 
 
 * initial revision
