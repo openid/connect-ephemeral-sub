@@ -137,7 +137,8 @@ The following referenced documents are indispensable for the application of this
 
 We would like to thank the following people for their valuable feedback and contributions to this specification.
 
-[[TBD]]
+* Frederik Krogsdal Jacobsen
+* Mark Haine
 
 # Notices
 
