@@ -81,8 +81,7 @@ For the purpose of this document, the terms defined in [RFC6749], and [OpenID Co
 This document adds a new subject identifier type as follows, in addition to what is defined in Section 8 of [OpenID Connect Core 1.0][OIDC]:
 
 ephemeral
-: This provides a different *sub* value to each visit by the End User to a relying party, so as not to enable Clients to correlate the End-User's multiple visits.
-
+: This provides a different *sub* value to each visit by the End User to a relying party that should not be re-used, in order that Clients can not correlate the End-User's multiple visits. There should be sufficient entropy in the response values to facilitate this.
 
 # OpenID Provider Discovery Metadata
 
