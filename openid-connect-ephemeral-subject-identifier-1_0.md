@@ -87,7 +87,7 @@ To make it not possible for Clients to correlate the End-User's multiple visits,
 
 1. MUST NOT reuse an ephemeral identifier value; 
 2. MUST generate the value with a guessing probability of 2^-128^ or less; and
-3. SHOULD target 2^160^ or less.
+3. SHOULD target 2^-160^ or less.
 
 # OpenID Provider Discovery Metadata
 
