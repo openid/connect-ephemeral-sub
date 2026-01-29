@@ -83,7 +83,7 @@ This document adds a new subject identifier type as follows, in addition to what
 ephemeral
 : This provides a different *sub* value for each End User visit to a relying party. 
 
-To make it not possible for Clients to correlate the End-User's multiple visits, an OP 
+To ensure it is not possible for Clients to correlate the End-User's multiple visits, an OP 
 
 1. MUST NOT reuse an ephemeral identifier value; 
 2. MUST generate the value with a guessing probability of 2^-128^ or less; and
