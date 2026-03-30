@@ -81,9 +81,9 @@ For the purpose of this document, the terms defined in [RFC6749], and [OpenID Co
 This document adds a new subject identifier type as follows, in addition to what is defined in Section 8 of [OpenID Connect Core 1.0][OIDC]:
 
 ephemeral
-: This provides a different *sub* value for each End User visit to a relying party. 
+: type of an identifier when the type is so, the sub provided by ID Token is different for every authentication requiest
 
-To ensure it is not possible for Clients to correlate the End-User's multiple visits, an OP 
+NOTE: It will ensure that it is not possible for Clients to correlate the End-User's multiple visits, an OP 
 
 1. MUST NOT reuse an ephemeral identifier value;
 2. MUST generate the value with a guessing probability of 2⁻¹²⁸ or less;
