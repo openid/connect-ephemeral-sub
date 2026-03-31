@@ -56,7 +56,7 @@ The OpenID Foundation (OIDF) promotes, protects and nurtures the OpenID communit
 This document specifies an ephemeral subject identifier type for [OpenID Connect Core 1.0][OIDC]. The ephemeral subject identifier identifies the End-User for a short time and remains constant for the duration of the authentication session. In subsequent visits by the End-User to a Relying Party application that requires authentication, the authorization server will return a subject identifier with a different value. The authorization server provides an ephemeral subject identifier to the Relying Party in the ID Token and UserInfo endpoint response as specified by [OpenID Connect Core 1.0][OIDC]. 
 
 There are several reasons for defining it:  
-* It is already used in some ecosystems. Standardizing it would therefore reduce existing variations;
+* It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.
 * It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551 Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication. 
 
 Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc. 
@@ -81,7 +81,7 @@ For the purpose of this document, the terms defined in [RFC6749], and [OpenID Co
 This document adds a new subject identifier type as follows, in addition to what is defined in Section 8 of [OpenID Connect Core 1.0][OIDC]:
 
 ephemeral
-: type of an identifier when the type is so, the sub provided by ID Token is different for every authentication requiest
+: type of an identifier when the sub provided by ID Token is different for every authentication request
 
 NOTE: It will ensure that it is not possible for Clients to correlate the End-User's multiple visits, an OP 
 
@@ -119,7 +119,7 @@ The privacy objectives of this document are as follows:
 # References
 
 ## Normative references
-The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applied. For undated references, the latest edition of the referenced document (including any amendments) applies.
+The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
 
 [BCP14] - Key words for use in RFCs to Indicate Requirement Levels
 [BCP14]: https://tools.ietf.org/html/bcp14
@@ -157,6 +157,7 @@ We would like to thank the following people for their valuable feedback and cont
 * Mark Haine
 * Andy Barlow
 * Edmund Jay
+* Nat Sakimura
 
 # Notices
 
