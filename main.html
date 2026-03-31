@@ -1319,7 +1319,7 @@ li > p:last-of-type:only-child {
       </h2>
 <p id="section-1-1">This document specifies an ephemeral subject identifier type for <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>. The ephemeral subject identifier identifies the End-User for a short time and remains constant for the duration of the authentication session. In subsequent visits by the End-User to a Relying Party application that requires authentication, the authorization server will return a subject identifier with a different value. The authorization server provides an ephemeral subject identifier to the Relying Party in the ID Token and UserInfo endpoint response as specified by <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">There are several reasons for defining it:<br>
-* It is already used in some ecosystems. Standardizing it would therefore reduce existing variations;
+* It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.
 * It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551 Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc.<a href="#section-1-3" class="pilcrow">¶</a></p>
 </section>
@@ -1353,7 +1353,7 @@ capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-4-1">This document adds a new subject identifier type as follows, in addition to what is defined in Section 8 of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>:<a href="#section-4-1" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlCompact dlParallel" id="section-4-2">
         <dt id="section-4-2.1">ephemeral</dt>
-        <dd style="margin-left: 1.5em" id="section-4-2.2">type of an identifier when the type is so, the sub provided by ID Token is different for every authentication requiest<a href="#section-4-2.2" class="pilcrow">¶</a>
+        <dd style="margin-left: 1.5em" id="section-4-2.2">type of an identifier when the sub provided by ID Token is different for every authentication request<a href="#section-4-2.2" class="pilcrow">¶</a>
 </dd>
       <dd class="break"></dd>
 </dl>
@@ -1427,7 +1427,7 @@ random and the timestamp as the <em>sub</em> value.<a href="#section-7-1" class=
         <h3 id="name-normative-references">
 <a href="#section-9.1" class="section-number selfRef">9.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative references</a>
         </h3>
-<p id="section-9.1-1">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applied. For undated references, the latest edition of the referenced document (including any amendments) applies.<a href="#section-9.1-1" class="pilcrow">¶</a></p>
+<p id="section-9.1-1">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.<a href="#section-9.1-1" class="pilcrow">¶</a></p>
 <p id="section-9.1-2"><a href="https://tools.ietf.org/html/bcp14">BCP14</a> - Key words for use in RFCs to Indicate Requirement Levels<a href="#section-9.1-2" class="pilcrow">¶</a></p>
 <p id="section-9.1-3"><a href="https://tools.ietf.org/html/rfc2119">RFC2119</a> - Key words for use in RFCs to Indicate Requirement Levels<a href="#section-9.1-3" class="pilcrow">¶</a></p>
 <p id="section-9.1-4"><a href="https://tools.ietf.org/html/rfc8174">RFC8174</a> - Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words<a href="#section-9.1-4" class="pilcrow">¶</a></p>
@@ -1461,6 +1461,8 @@ random and the timestamp as the <em>sub</em> value.<a href="#section-7-1" class=
         <li class="compact" id="appendix-A-2.3">Andy Barlow<a href="#appendix-A-2.3" class="pilcrow">¶</a>
 </li>
         <li class="compact" id="appendix-A-2.4">Edmund Jay<a href="#appendix-A-2.4" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-A-2.5">Nat Sakimura<a href="#appendix-A-2.5" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
