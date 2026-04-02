@@ -1,5 +1,5 @@
 %%%
-title = "OpenID Connect Ephermeral Subject Identifier 1.0 - Draft 01"
+title = "OpenID Connect Ephermeral Subject Identifier 1.0 - Draft 02"
 abbrev = "oidc-esid"
 ipr = "none"
 workgroup = "Connect"
@@ -7,12 +7,12 @@ keyword = ["openid", "ephemeral", "subject", "privacy"]
 
 [seriesInfo]
 name = "OpenID-Draft"
-value = "openid-connect-ephemeral-subject-identifier-1_0-01"
+value = "openid-connect-ephemeral-subject-identifier-1_0-02"
 status = "standard"
 
 [pi]
 subcompact = "yes"
-private = "Draft-01"
+private = "Draft-02"
 tocdepth = "5"
 iprnotified = "no"
 
@@ -161,7 +161,7 @@ We would like to thank the following people for their valuable feedback and cont
 
 # Notices
 
-Copyright (c) 2025 The OpenID Foundation.
+Copyright (c) 2026 The OpenID Foundation.
 
 The OpenID Foundation (OIDF) grants to any Contributor, developer, implementer, or other interested party a non-exclusive, royalty free, worldwide copyright license to reproduce, prepare derivative works from, distribute, perform and display, this Implementers Draft, Final Specification, or Final Specification Incorporating Errata Corrections solely for the purposes of (i) developing specifications, and (ii) implementing Implementers Drafts, Final Specifications, and Final Specification Incorporating Errata Corrections based on such documents, provided that attribution be made to the OIDF as the source of the material, but that such attribution does not indicate an endorsement by the OIDF.
 
