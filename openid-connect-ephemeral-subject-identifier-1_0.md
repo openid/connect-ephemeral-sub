@@ -171,6 +171,8 @@ The technology described in this specification was made available from contribut
 
 [[ To be removed from the final specification ]]
 
+-02 Tightened the ephemeral identifier definition. Added names to acknowledgements. 
+
 -01 Added rationale for this document and a reference to ISO/IEC 27551. 
 
 * initial revision
