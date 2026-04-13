@@ -58,7 +58,7 @@ This document specifies an ephemeral subject identifier type for [OpenID Connect
 There are several reasons for defining it:  
 
 * It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.
-* It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551 Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication. 
+* It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in [ISO/IEC 27551] Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication. 
 
 Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc. 
 
@@ -67,8 +67,8 @@ Examples of attribute-based unlinkable entity authentication include Overage ver
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-"OPTIONAL" in this document are to be interpreted as described in BCP
-14 [RFC2119] [RFC8174] when, and only when, they appear in all
+"OPTIONAL" in this document are to be interpreted as described in [BCP14]
+([RFC2119], [RFC8174]) when, and only when, they appear in all
 capitals, as shown here.
 
 In the .txt version of this document, values are quoted to indicate that they are to be taken literally. When using these values in protocol messages, the quotes MUST NOT be used as part of the value. In the HTML version of this document, values to be taken literally are indicated by the use of this fixed-width font.
@@ -95,13 +95,13 @@ To ensure that it is not possible for Clients to correlate multiple authenticati
 
 The OpenID Provider indicates support for ephemeral subject identifiers in the metadata document.
 
-This document defines the following new value for the _subject\_types\_supported_ metadata of [OpenID Discovery 1.0][OpenID.Discovery]:
+This document defines the following new value for the `subject_types_supported` metadata of [OpenID Discovery 1.0][OpenID Discovery]:
 
-* _ephemeral_ - ephemeral subject identifiers
+* `ephemeral` - ephemeral subject identifiers
 
 # Client Registration
 
-The RP requests the OP to return ephemeral subject identifiers by registering _ephemeral_ as the _subject\_type_ in [OpenID Dynamic Registration 1.0][OpenID.Registration] or by other means.
+The RP requests the OP to return ephemeral subject identifiers by registering `ephemeral` as the `subject_type` in [OpenID Dynamic Client Registration 1.0][OpenID Registration] or by other means.
 
 # Security Considerations
 
@@ -125,23 +125,23 @@ The following referenced documents are indispensable for the application of this
 [BCP14] - Key words for use in RFCs to Indicate Requirement Levels
 [BCP14]: https://tools.ietf.org/html/bcp14
 
-[RFC2119] - Key words for use in RFCs to Indicate Requirement Levels
+[RFC2119] - Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997, <https://www.rfc-editor.org/info/rfc2119>.
 [RFC2119]: https://tools.ietf.org/html/rfc2119
 
-[RFC8174] - Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
+[RFC8174] - Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 [RFC8174]: https://tools.ietf.org/html/rfc8174
 
-[RFC6749] - The OAuth 2.0 Authorization Framework
+[RFC6749] - Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749, DOI 10.17487/RFC6749, October 2012, <https://www.rfc-editor.org/info/rfc6749>.
 [RFC6749]: https://tools.ietf.org/html/rfc6749
 
-[OIDC] - OpenID Connect Core 1.0 incorporating errata set 1
+[OIDC] - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B., and C. Mortimore, "OpenID Connect Core 1.0 incorporating errata set 2", 15 December 2023, <http://openid.net/specs/openid-connect-core-1_0.html>.
 [OIDC]: https://openid.net/specs/openid-connect-core-1_0.html
 
-[OpenID.Discovery] - OpenID Connect Discovery 1.0
-[OpenID.Discovery]: https://openid.net/specs/openid-connect-discovery-1_0.html
+[OpenID Discovery] - Sakimura, N., Bradley, J., Jones, M.B., and E. Jay, "OpenID Connect Discovery 1.0", 15 December 2023, <https://openid.net/specs/openid-connect-discovery-1_0.html>.
+[OpenID Discovery]: https://openid.net/specs/openid-connect-discovery-1_0.html
 
-[OpenID.Registration] - OpenID Connect Registration 1.0
-[OpenID.Registration]: http://openid.net/specs/openid-connect-registration-1_0.html
+[OpenID Registration] - Sakimura, N., Bradley, J., and M.B. Jones, "OpenID Connect Dynamic Client Registration 1.0", 15 December 2023, <https://openid.net/specs/openid-connect-registration-1_0.html>.
+[OpenID Registration]: http://openid.net/specs/openid-connect-registration-1_0.html
 
 ## Informative references
 
@@ -160,6 +160,81 @@ We would like to thank the following people for their valuable feedback and cont
 * Edmund Jay
 * Nat Sakimura
 
+<reference anchor="OpenID.Core" target="http://openid.net/specs/openid-connect-core-1_0.html">
+  <front>
+    <title>OpenID Connect Core 1.0 incorporating errata set 2</title>
+    <author initials="N." surname="Sakimura" fullname="Nat Sakimura">
+      <organization>NRI</organization>
+    </author>
+    <author initials="J." surname="Bradley" fullname="John Bradley">
+      <organization>Ping Identity</organization>
+    </author>
+    <author initials="M." surname="Jones" fullname="Michael B. Jones">
+      <organization>Microsoft</organization>
+    </author>
+    <author initials="B." surname="de Medeiros" fullname="Breno de Medeiros">
+      <organization>Google</organization>
+    </author>
+    <author initials="C." surname="Mortimore" fullname="Chuck Mortimore">
+      <organization>Salesforce</organization>
+    </author>
+   <date day="15" month="December" year="2023"/>
+  </front>
+</reference>
+
+<reference anchor="OpenID.Discovery" target="https://openid.net/specs/openid-connect-discovery-1_0.html">
+  <front>
+    <title>OpenID Connect Discovery 1.0</title>
+
+    <author fullname="Nat Sakimura" initials="N." surname="Sakimura">
+      <organization abbrev="NAT.Consulting (was at NRI)">NAT.Consulting</organization>
+    </author>
+
+    <author fullname="John Bradley" initials="J." surname="Bradley">
+      <organization abbrev="Yubico (was at Ping Identity)">Yubico</organization>
+    </author>
+
+    <author fullname="Michael B. Jones" initials="M.B." surname="Jones">
+      <organization abbrev="Self-Issued Consulting (was at Microsoft)">Self-Issued Consulting</organization>
+    </author>
+
+    <author fullname="Edmund Jay" initials="E." surname="Jay">
+      <organization abbrev="Illumila">Illumila</organization>
+    </author>
+
+    <date day="15" month="December" year="2023"/>
+  </front>
+</reference>
+
+<reference anchor="OpenID.Registration" target="https://openid.net/specs/openid-connect-registration-1_0.html">
+  <front>
+    <title>OpenID Connect Dynamic Client Registration 1.0</title>
+
+    <author fullname="Nat Sakimura" initials="N." surname="Sakimura">
+      <organization abbrev="NAT.Consulting (was at NRI)">NAT.Consulting</organization>
+    </author>
+
+    <author fullname="John Bradley" initials="J." surname="Bradley">
+      <organization abbrev="Yubico (was at Ping Identity)">Yubico</organization>
+    </author>
+
+    <author fullname="Michael B. Jones" initials="M.B." surname="Jones">
+      <organization abbrev="Self-Issued Consulting (was at Microsoft)">Self-Issued Consulting</organization>
+    </author>
+
+    <date day="15" month="December" year="2023"/>
+  </front>
+</reference>
+
+
+<reference anchor="ISO.27551" target="https://www.iso.org/standard/72018.html">
+  <front>
+    <title>Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication</title>
+
+    <date month="September" year="2021" />
+  </front>
+</reference>
+
 # Notices
 
 Copyright (c) 2026 The OpenID Foundation.
@@ -174,6 +249,6 @@ The technology described in this specification was made available from contribut
 
 -02 Tightened the ephemeral identifier definition. Added names to acknowledgements. 
 
--01 Added rationale for this document and a reference to ISO/IEC 27551. 
+-01 Added rationale for this document and a reference to [ISO/IEC 27551]. 
 
 * initial revision
