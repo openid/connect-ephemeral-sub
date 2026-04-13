@@ -1,5 +1,5 @@
 %%%
-title = "OpenID Connect Ephermeral Subject Identifier 1.0 - Draft 02"
+title = "OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 02"
 abbrev = "oidc-esid"
 ipr = "none"
 workgroup = "Connect"
@@ -48,7 +48,7 @@ Recipients of this draft are invited to submit, with their comments, notificatio
 
 .# Foreword
 
-The OpenID Foundation (OIDF) promotes, protects and nurtures the OpenID community and technologies. As a non-profit international standardizing body, it is comprised by over 160 participating entities (workgroup participants). The work of preparing implementer drafts and final international standards is carried out through OIDF workgroups in accordance with the OpenID Process. Participants interested in a subject for which a workgroup has been established has the right to be represented in that workgroup. International organizations, governmental and non-governmental, in liaison with OIDF, also take part in the work. OIDF collaborates closely with other standardizing bodies in the related fields.
+The OpenID Foundation (OIDF) promotes, protects and nurtures the OpenID community and technologies. As a non-profit international standardizing body, it is comprised of over 160 participating entities (workgroup participants). The work of preparing implementer drafts and final international standards is carried out through OIDF workgroups in accordance with the OpenID Process. Participants interested in a subject for which a workgroup has been established have the right to be represented in that workgroup. International organizations, governmental and non-governmental, in liaison with OIDF, also take part in the work. OIDF collaborates closely with other standardizing bodies in the related fields.
 
 {mainmatter}
 
@@ -83,7 +83,7 @@ This document adds a new subject identifier type as follows, in addition to what
 ephemeral
 : type of an identifier when the sub provided by ID Token is different for every authentication request
 
-To ensure that it is not possible for Clients to correlate multiple authentication response, an OP 
+To ensure that it is not possible for Clients to correlate multiple authentication responses, an OP 
 
 1. MUST NOT reuse an ephemeral identifier value;
 2. MUST generate the value with a guessing probability of 2^-128^ or less;
