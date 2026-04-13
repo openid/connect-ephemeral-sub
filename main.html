@@ -1222,7 +1222,7 @@ li > p:last-of-type:only-child {
 <dd class="workgroup">Connect</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-04-02" class="published">2 April 2026</time>
+<time datetime="2026-04-13" class="published">13 April 2026</time>
     </dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
@@ -1318,10 +1318,14 @@ li > p:last-of-type:only-child {
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <p id="section-1-1">This document specifies an ephemeral subject identifier type for <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>. The ephemeral subject identifier identifies the End-User for a short time and remains constant for the duration of the authentication session. In subsequent visits by the End-User to a Relying Party application that requires authentication, the authorization server will return a subject identifier with a different value. The authorization server provides an ephemeral subject identifier to the Relying Party in the ID Token and UserInfo endpoint response as specified by <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">There are several reasons for defining it:<br>
-* It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.
-* It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551 Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-2">There are several reasons for defining it:<a href="#section-1-2" class="pilcrow">¶</a></p>
+<ul class="compact">
+<li class="compact" id="section-1-3.1">It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.<a href="#section-1-3.1" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="section-1-3.2">It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551 Information security, cybersecurity and privacy protection - Requirements for attribute-based unlinkable entity authentication.<a href="#section-1-3.2" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-1-4">Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="requirements-notation-and-conventions">
