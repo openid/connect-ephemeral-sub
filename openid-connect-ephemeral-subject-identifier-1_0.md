@@ -95,13 +95,13 @@ To ensure that it is not possible for Clients to correlate multiple authenticati
 
 The OpenID Provider indicates support for ephemeral subject identifiers in the metadata document.
 
-This document defines the following new value for the _subject\_types\_supported_ metadata of [OpenID Discovery 1.0][OpenID Discovery]:
+This document defines the following new value for the `subject_types_supported` metadata of [OpenID Discovery 1.0][OpenID Discovery]:
 
-* _ephemeral_ - ephemeral subject identifiers
+* `ephemeral` - ephemeral subject identifiers
 
 # Client Registration
 
-The RP requests the OP to return ephemeral subject identifiers by registering _ephemeral_ as the _subject\_type_ in [OpenID Dynamic Client Registration 1.0][OpenID Registration] or by other means.
+The RP requests the OP to return ephemeral subject identifiers by registering `ephemeral` as the `subject_type` in [OpenID Dynamic Client Registration 1.0][OpenID Registration] or by other means.
 
 # Security Considerations
 
