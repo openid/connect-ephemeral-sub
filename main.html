@@ -1207,7 +1207,7 @@ li > p:last-of-type:only-child {
 <thead><tr>
 <td class="left"></td>
 <td class="center">oidc-esid</td>
-<td class="right">April 2026</td>
+<td class="right">May 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Sakimura &amp; Jay</td>
@@ -1222,7 +1222,7 @@ li > p:last-of-type:only-child {
 <dd class="workgroup">Connect</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-04-13" class="published">13 April 2026</time>
+<time datetime="2026-05-14" class="published">14 May 2026</time>
     </dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
@@ -1322,7 +1322,7 @@ li > p:last-of-type:only-child {
 <ul class="compact">
 <li class="compact" id="section-1-3.1">It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.<a href="#section-1-3.1" class="pilcrow">¶</a>
 </li>
-        <li class="compact" id="section-1-3.2">It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551 Information security, cybersecurity and privacy protection - Requirements for attribute-based unlinkable entity authentication.<a href="#section-1-3.2" class="pilcrow">¶</a>
+        <li class="compact" id="section-1-3.2">It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in <a href="https://www.iso.org/standard/72018.html">ISO/IEC 27551</a> Information security, cybersecurity and privacy protection - Requirements for attribute-based unlinkable entity authentication.<a href="#section-1-3.2" class="pilcrow">¶</a>
 </li>
       </ul>
 <p id="section-1-4">Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc.<a href="#section-1-4" class="pilcrow">¶</a></p>
@@ -1335,8 +1335,7 @@ li > p:last-of-type:only-child {
       </h2>
 <p id="section-2-1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-"OPTIONAL" in this document are to be interpreted as described in BCP
-14 <a href="https://tools.ietf.org/html/rfc8174">RFC2119</a> when, and only when, they appear in all
+"OPTIONAL" in this document are to be interpreted as described in <a href="%5BRFC2119%5D,%20%5BRFC8174%5D">BCP14</a> when, and only when, they appear in all
 capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">In the .txt version of this document, values are quoted to indicate that they are to be taken literally. When using these values in protocol messages, the quotes MUST NOT be used as part of the value. In the HTML version of this document, values to be taken literally are indicated by the use of this fixed-width font.<a href="#section-2-2" class="pilcrow">¶</a></p>
 </section>
@@ -1380,10 +1379,10 @@ capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-openid-provider-discovery-m" class="section-name selfRef">OpenID Provider Discovery Metadata</a>
       </h2>
 <p id="section-5-1">The OpenID Provider indicates support for ephemeral subject identifiers in the metadata document.<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2">This document defines the following new value for the <em>subject_types_supported</em> metadata of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Discovery 1.0</a>:<a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-2">This document defines the following new value for the <code>subject_types_supported</code> metadata of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Discovery 1.0</a>:<a href="#section-5-2" class="pilcrow">¶</a></p>
 <ul class="compact">
 <li class="compact" id="section-5-3.1">
-          <em>ephemeral</em> - ephemeral subject identifiers<a href="#section-5-3.1" class="pilcrow">¶</a>
+          <code>ephemeral</code> - ephemeral subject identifiers<a href="#section-5-3.1" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
@@ -1393,7 +1392,7 @@ capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
       <h2 id="name-client-registration">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-client-registration" class="section-name selfRef">Client Registration</a>
       </h2>
-<p id="section-6-1">The RP requests the OP to return ephemeral subject identifiers by registering <em>ephemeral</em> as the <em>subject_type</em> in <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID Dynamic Registration 1.0</a> or by other means.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-1">The RP requests the OP to return ephemeral subject identifiers by registering <code>ephemeral</code> as the <code>subject_type</code> in <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID Dynamic Client Registration 1.0</a> or by other means.<a href="#section-6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1404,7 +1403,7 @@ capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-7-1">The generated ephemeral identifier needs to be unique over time.
 Otherwise, the RP may link two different users to the same record and will cause a security incident.
 One way to achieve uniqueness is to use the hash of the combination of a cryptographic
-random and the timestamp as the <em>sub</em> value.<a href="#section-7-1" class="pilcrow">¶</a></p>
+random and the timestamp as the <code>sub</code> value.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="privacy-considerations">
@@ -1433,12 +1432,12 @@ random and the timestamp as the <em>sub</em> value.<a href="#section-7-1" class=
         </h3>
 <p id="section-9.1-1">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.<a href="#section-9.1-1" class="pilcrow">¶</a></p>
 <p id="section-9.1-2"><a href="https://tools.ietf.org/html/bcp14">BCP14</a> - Key words for use in RFCs to Indicate Requirement Levels<a href="#section-9.1-2" class="pilcrow">¶</a></p>
-<p id="section-9.1-3"><a href="https://tools.ietf.org/html/rfc2119">RFC2119</a> - Key words for use in RFCs to Indicate Requirement Levels<a href="#section-9.1-3" class="pilcrow">¶</a></p>
-<p id="section-9.1-4"><a href="https://tools.ietf.org/html/rfc8174">RFC8174</a> - Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words<a href="#section-9.1-4" class="pilcrow">¶</a></p>
-<p id="section-9.1-5"><a href="https://tools.ietf.org/html/rfc6749">RFC6749</a> - The OAuth 2.0 Authorization Framework<a href="#section-9.1-5" class="pilcrow">¶</a></p>
-<p id="section-9.1-6"><a href="https://openid.net/specs/openid-connect-core-1_0.html">OIDC</a> - OpenID Connect Core 1.0 incorporating errata set 1<a href="#section-9.1-6" class="pilcrow">¶</a></p>
-<p id="section-9.1-7"><a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID.Discovery</a> - OpenID Connect Discovery 1.0<a href="#section-9.1-7" class="pilcrow">¶</a></p>
-<p id="section-9.1-8"><a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID.Registration</a> - OpenID Connect Registration 1.0<a href="#section-9.1-8" class="pilcrow">¶</a></p>
+<p id="section-9.1-3"><a href="https://tools.ietf.org/html/rfc2119">RFC2119</a> - Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997, <a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>.<a href="#section-9.1-3" class="pilcrow">¶</a></p>
+<p id="section-9.1-4"><a href="https://tools.ietf.org/html/rfc8174">RFC8174</a> - Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017, <a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>.<a href="#section-9.1-4" class="pilcrow">¶</a></p>
+<p id="section-9.1-5"><a href="https://tools.ietf.org/html/rfc6749">RFC6749</a> - Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749, DOI 10.17487/RFC6749, October 2012, <a href="https://www.rfc-editor.org/info/rfc6749">https://www.rfc-editor.org/info/rfc6749</a>.<a href="#section-9.1-5" class="pilcrow">¶</a></p>
+<p id="section-9.1-6"><a href="https://openid.net/specs/openid-connect-core-1_0.html">OIDC</a> - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B., and C. Mortimore, "OpenID Connect Core 1.0 incorporating errata set 2", 15 December 2023, <a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>.<a href="#section-9.1-6" class="pilcrow">¶</a></p>
+<p id="section-9.1-7"><a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Discovery</a> - Sakimura, N., Bradley, J., Jones, M.B., and E. Jay, "OpenID Connect Discovery 1.0", 15 December 2023, <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">https://openid.net/specs/openid-connect-discovery-1_0.html</a>.<a href="#section-9.1-7" class="pilcrow">¶</a></p>
+<p id="section-9.1-8"><a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID Registration</a> - Sakimura, N., Bradley, J., and M.B. Jones, "OpenID Connect Dynamic Client Registration 1.0", 15 December 2023, <a href="https://openid.net/specs/openid-connect-registration-1_0.html">https://openid.net/specs/openid-connect-registration-1_0.html</a>.<a href="#section-9.1-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="informative-references">
@@ -1488,7 +1487,7 @@ random and the timestamp as the <em>sub</em> value.<a href="#section-7-1" class=
       </h2>
 <p id="appendix-C-1">[[ To be removed from the final specification ]]<a href="#appendix-C-1" class="pilcrow">¶</a></p>
 <p id="appendix-C-2">-02 Tightened the ephemeral identifier definition. Added names to acknowledgements.<a href="#appendix-C-2" class="pilcrow">¶</a></p>
-<p id="appendix-C-3">-01 Added rationale for this document and a reference to ISO/IEC 27551.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
+<p id="appendix-C-3">-01 Added rationale for this document and a reference to <a href="https://www.iso.org/standard/72018.html">ISO/IEC 27551</a>.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
 <ul class="compact">
 <li class="compact" id="appendix-C-4.1">initial revision<a href="#appendix-C-4.1" class="pilcrow">¶</a>
 </li>
