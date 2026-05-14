@@ -108,7 +108,7 @@ The RP requests the OP to return ephemeral subject identifiers by registering `e
 The generated ephemeral identifier needs to be unique over time.
 Otherwise, the RP may link two different users to the same record and will cause a security incident.
 One way to achieve uniqueness is to use the hash of the combination of a cryptographic
-random and the timestamp as the *sub* value.
+random and the timestamp as the `sub` value.
 
 # Privacy Considerations
 
