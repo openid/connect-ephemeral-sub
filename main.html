@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 02</title>
+<title>OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 03</title>
 <meta content="Nat Sakimura" name="author">
 <meta content="Edmund Jay" name="author">
 <meta content="
@@ -15,7 +15,7 @@
 <meta content="ephemeral" name="keyword">
 <meta content="subject" name="keyword">
 <meta content="privacy" name="keyword">
-<meta content="openid-connect-ephemeral-subject-identifier-1_0-02" name="ietf.draft">
+<meta content="openid-connect-ephemeral-subject-identifier-1_0-03" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.16.0
     Python 3.10.2
@@ -34,7 +34,7 @@
     six 1.16.0
     wcwidth 0.2.6
 -->
-<link href="./openid-connect-ephemeral-subject-identifier-1_0-02.xml" rel="alternate" type="application/rfc+xml">
+<link href="./openid-connect-ephemeral-subject-identifier-1_0-03.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">/*
 
@@ -1207,7 +1207,7 @@ li > p:last-of-type:only-child {
 <thead><tr>
 <td class="left"></td>
 <td class="center">oidc-esid</td>
-<td class="right">May 2026</td>
+<td class="right">July 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Sakimura &amp; Jay</td>
@@ -1222,7 +1222,7 @@ li > p:last-of-type:only-child {
 <dd class="workgroup">Connect</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-05-14" class="published">14 May 2026</time>
+<time datetime="2026-07-06" class="published">6 July 2026</time>
     </dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
@@ -1237,7 +1237,7 @@ li > p:last-of-type:only-child {
 </dd>
 </dl>
 </div>
-<h1 id="title">OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 02</h1>
+<h1 id="title">OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 03</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">OpenID Connect specifies the public and pairwise subject identifier types. These types of subject identifiers allow relying parties to keep track of the End-User across multiple visits to the relying party application by correlating the subject identifier. This document specifies an ephemeral subject identifier type that prevents correlation of the subject identifier across multiple visits to enhance user privacy.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
@@ -1400,10 +1400,8 @@ capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
       <h2 id="name-security-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-7-1">The generated ephemeral identifier needs to be unique over time.
-Otherwise, the RP may link two different users to the same record and will cause a security incident.
-One way to achieve uniqueness is to use the hash of the combination of a cryptographic
-random and the timestamp as the <code>sub</code> value.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">The security and privacy properties of ephemeral identifiers depend on non-reuse, unpredictability, and a sufficiently low probability of collision over the expected lifetime and scale of the deployment. Reuse or predictability can allow a Client to correlate multiple authentication responses. A collision can cause an RP to associate two different authentication responses, and potentially two different users, with the same local record, resulting in account mix-up, incorrect authorization decisions, information disclosure, or other security and privacy incidents.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-2">Implementers need to generate ephemeral identifiers using a cryptographically secure source of randomness with sufficient entropy. General-purpose pseudo-random functions are not adequate. Constructions based on timestamps, process identifiers, counters, weak pseudo-random functions, or insufficiently seeded random number generators can be predictable or can repeat across processes, containers, virtual machines, or restarts. The effective guessing and collision resistance depends on the entropy actually provided by the generation process, not on the textual length or apparent syntax of the identifier.<a href="#section-7-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="privacy-considerations">
@@ -1415,7 +1413,7 @@ random and the timestamp as the <code>sub</code> value.<a href="#section-7-1" cl
 <ol start="1" type="1" class="compact type-1" id="section-8-2">
 <li id="section-8-2.1">to make it unfeasible for the RP to link two independent visits by the user. Inclusion of cryptographic random in the input to the hash function that generates the subject identifier would achieve it.<a href="#section-8-2.1" class="pilcrow">¶</a>
 </li>
-        <li id="section-8-2.2">to make it unfeasible for colluding RPs to link two independent visits among them.<a href="#section-8-2.2" class="pilcrow">¶</a>
+        <li id="section-8-2.2">to make it unfeasible for colluding RPs to link two independent authentication responses among them.<a href="#section-8-2.2" class="pilcrow">¶</a>
 </li>
       </ol>
 </section>
@@ -1486,10 +1484,11 @@ random and the timestamp as the <code>sub</code> value.<a href="#section-7-1" cl
 <a href="#appendix-C" class="section-number selfRef">Appendix C. </a><a href="#name-document-history" class="section-name selfRef">Document History</a>
       </h2>
 <p id="appendix-C-1">[[ To be removed from the final specification ]]<a href="#appendix-C-1" class="pilcrow">¶</a></p>
-<p id="appendix-C-2">-02 Tightened the ephemeral identifier definition. Added names to acknowledgements.<a href="#appendix-C-2" class="pilcrow">¶</a></p>
-<p id="appendix-C-3">-01 Added rationale for this document and a reference to <a href="https://www.iso.org/standard/72018.html">ISO/IEC 27551</a>.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
+<p id="appendix-C-2">-03 Made the Security Consideration more explanatory. Reworded 'visits' in Privacy Consideration.<a href="#appendix-C-2" class="pilcrow">¶</a></p>
+<p id="appendix-C-3">-02 Tightened the ephemeral identifier definition. Added names to acknowledgements.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
+<p id="appendix-C-4">-01 Added rationale for this document and a reference to <a href="https://www.iso.org/standard/72018.html">ISO/IEC 27551</a>.<a href="#appendix-C-4" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-C-4.1">initial revision<a href="#appendix-C-4.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-C-5.1">initial revision<a href="#appendix-C-5.1" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
