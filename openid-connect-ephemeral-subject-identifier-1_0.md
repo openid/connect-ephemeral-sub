@@ -1,5 +1,5 @@
 %%%
-title = "OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 02"
+title = "OpenID Connect Ephemeral Subject Identifier 1.0 - Draft 03"
 abbrev = "oidc-esid"
 ipr = "none"
 workgroup = "Connect"
@@ -7,12 +7,12 @@ keyword = ["openid", "ephemeral", "subject", "privacy"]
 
 [seriesInfo]
 name = "OpenID-Draft"
-value = "openid-connect-ephemeral-subject-identifier-1_0-02"
+value = "openid-connect-ephemeral-subject-identifier-1_0-03"
 status = "standard"
 
 [pi]
 subcompact = "yes"
-private = "Draft-02"
+private = "Draft-03"
 tocdepth = "5"
 iprnotified = "no"
 
@@ -105,17 +105,16 @@ The RP requests the OP to return ephemeral subject identifiers by registering `e
 
 # Security Considerations
 
-The generated ephemeral identifier needs to be unique over time.
-Otherwise, the RP may link two different users to the same record and will cause a security incident.
-One way to achieve uniqueness is to use the hash of the combination of a cryptographic
-random and the timestamp as the `sub` value.
+The security and privacy properties of ephemeral identifiers depend on non-reuse, unpredictability, and a sufficiently low probability of collision over the expected lifetime and scale of the deployment. Reuse or predictability can allow a Client to correlate multiple authentication responses. A collision can cause an RP to associate two different authentication responses, and potentially two different users, with the same local record, resulting in account mix-up, incorrect authorization decisions, information disclosure, or other security and privacy incidents.
+
+Implementers need to generate ephemeral identifiers using a cryptographically secure source of randomness with sufficient entropy. General-purpose pseudo-random functions are not adequate. Constructions based on timestamps, process identifiers, counters, weak pseudo-random functions, or insufficiently seeded random number generators can be predictable or can repeat across processes, containers, virtual machines, or restarts. The effective guessing and collision resistance depends on the entropy actually provided by the generation process, not on the textual length or apparent syntax of the identifier.
 
 # Privacy Considerations
 
 The privacy objectives of this document are as follows:
 
 1.  to make it unfeasible for the RP to link two independent visits by the user. Inclusion of cryptographic random in the input to the hash function that generates the subject identifier would achieve it.
-2.  to make it unfeasible for colluding RPs to link two independent visits among them.
+2.  to make it unfeasible for colluding RPs to link two independent authentication responses among them.
 
 # References
 
@@ -246,6 +245,8 @@ The technology described in this specification was made available from contribut
 # Document History
 
 [[ To be removed from the final specification ]]
+
+-03 Made the Security Consideration more explanatory. Reworded 'visits' in Privacy Consideration. 
 
 -02 Tightened the ephemeral identifier definition. Added names to acknowledgements. 
 
