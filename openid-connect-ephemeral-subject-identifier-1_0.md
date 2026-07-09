@@ -58,7 +58,7 @@ This document specifies an ephemeral subject identifier type for [OpenID Connect
 There are several reasons for defining it:  
 
 * It is already used in some ecosystems. Standardizing it would therefore reduce existing variations.
-* It is a condition needed to mathematically prove that OIDC/SIOP fulfills the Unlinkability Level (UL) 3A+ defined in [ISO/IEC 27551] Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication. 
+* It is a condition needed to mathematically prove that OpenID Connect with Self-Issued OpenID Provider fulfills the Unlinkability Level (UL) 3A+ defined in ISO/IEC 27551, Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication.
 
 Examples of attribute-based unlinkable entity authentication include Overage verification, Underage verification, Registered domicile verification, etc. 
 
@@ -133,19 +133,18 @@ The following referenced documents are indispensable for the application of this
 [RFC6749] - Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749, DOI 10.17487/RFC6749, October 2012, <https://www.rfc-editor.org/info/rfc6749>.
 [RFC6749]: https://tools.ietf.org/html/rfc6749
 
-[OIDC] - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B., and C. Mortimore, "OpenID Connect Core 1.0 incorporating errata set 2", 15 December 2023, <http://openid.net/specs/openid-connect-core-1_0.html>.
+[OIDC] - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B., and C. Mortimore, "OpenID Connect Core 1.0 incorporating errata set 2", 15 December 2023, <https://openid.net/specs/openid-connect-core-1_0.html>.
 [OIDC]: https://openid.net/specs/openid-connect-core-1_0.html
 
 [OpenID Discovery] - Sakimura, N., Bradley, J., Jones, M.B., and E. Jay, "OpenID Connect Discovery 1.0", 15 December 2023, <https://openid.net/specs/openid-connect-discovery-1_0.html>.
 [OpenID Discovery]: https://openid.net/specs/openid-connect-discovery-1_0.html
 
 [OpenID Registration] - Sakimura, N., Bradley, J., and M.B. Jones, "OpenID Connect Dynamic Client Registration 1.0", 15 December 2023, <https://openid.net/specs/openid-connect-registration-1_0.html>.
-[OpenID Registration]: http://openid.net/specs/openid-connect-registration-1_0.html
+[OpenID Registration]: https://openid.net/specs/openid-connect-registration-1_0.html
 
 ## Informative references
 
-[ISO/IEC 27551] - Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication
-[ISO/IEC 27551]: https://www.iso.org/standard/72018.html
+ISO/IEC 27551 - Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication
 
 {backmatter}
 
@@ -159,7 +158,7 @@ We would like to thank the following people for their valuable feedback and cont
 * Edmund Jay
 * Nat Sakimura
 
-<reference anchor="OpenID.Core" target="http://openid.net/specs/openid-connect-core-1_0.html">
+<reference anchor="OpenID.Core" target="https://openid.net/specs/openid-connect-core-1_0.html">
   <front>
     <title>OpenID Connect Core 1.0 incorporating errata set 2</title>
     <author initials="N." surname="Sakimura" fullname="Nat Sakimura">
@@ -226,14 +225,6 @@ We would like to thank the following people for their valuable feedback and cont
 </reference>
 
 
-<reference anchor="ISO.27551" target="https://www.iso.org/standard/72018.html">
-  <front>
-    <title>Information security, cybersecurity and privacy protection — Requirements for attribute-based unlinkable entity authentication</title>
-
-    <date month="September" year="2021" />
-  </front>
-</reference>
-
 # Notices
 
 Copyright (c) 2026 The OpenID Foundation.
@@ -250,6 +241,6 @@ The technology described in this specification was made available from contribut
 
 -02 Tightened the ephemeral identifier definition. Added names to acknowledgements. 
 
--01 Added rationale for this document and a reference to [ISO/IEC 27551]. 
+-01 Added rationale for this document and a reference to ISO/IEC 27551.
 
 * initial revision
